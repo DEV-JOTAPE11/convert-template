@@ -1,12 +1,14 @@
+// Cotação das moedas
 const USD = 5.42
 const EUR = 6.43
 const GBP = 7.30
 
-
+// Obtendo os elementos do DOM
 const form = document.querySelector("form")
 const amount = document.querySelector("#amount")
 const currency = document.querySelector("#currency")
 const footer = document.querySelector("main footer")
+const description = document.querySelector("#description")
 
 // Manipulando o input amount para receber somente números.
 amount.addEventListener("input", () => {
@@ -37,6 +39,8 @@ form.onsubmit = (event) => {
 //Função para converter a moeda.
 function convertCurrency(amount, price, symbol) {
    try {
+    description.textContent = `${symbol}1 = R$ ${price}`
+    
     // aplica a classe que exibe o footer com o resultado
     footer.classList.add("show-result")
    } catch (error) {
