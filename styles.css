@@ -103,27 +103,33 @@ select:focus {
 }
 
 button {
-  height: 3.25rem;
-
-  background-color: #2f34ab;
-
+  /* 1. O Gradiente "Sanduíche": Escuro -> Claro -> Escuro */
+  /* Isso garante que a transição seja suave nas pontas */
+  background-image: linear-gradient(to right, #141E30 0%, #3F5E96 50%, #141E30 100%);
+  
+  /* 2. O Truque: O fundo é 2x maior que o botão */
+  background-size: 200% auto;
+  
+  /* 3. Posição inicial: Fica parado na esquerda */
+  background-position: left center;
+  
+  /* 4. A mágica da suavidade */
+  transition: background-position 2s ease-out; /* ease-out faz parar devagar */
+  
+  /* Estilos visuais do botão (apenas exemplo) */
+  color: white;
+  padding: 15px 32px;
   border: none;
-  border-radius: 0.5rem;
-
-  color: #f1f2f6;
-
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s;
-
-  margin-top: 3rem;
-  outline: 0;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 6rem;
 }
 
 button:hover {
-  background-color: #4a5dcd;
+  /* 5. Ao passar o mouse, desliza o fundo para a direita */
+  background-position: right center;
 }
 
 button:focus {
