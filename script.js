@@ -9,6 +9,7 @@ const amount = document.querySelector("#amount")
 const currency = document.querySelector("#currency")
 const footer = document.querySelector("main footer")
 const description = document.querySelector("#description")
+const result = document.querySelector("#result")
 
 // Manipulando o input amount para receber somente números.
 amount.addEventListener("input", () => {
@@ -41,6 +42,12 @@ function convertCurrency(amount, price, symbol) {
    try {
     // atualiza o texto do description com o resultado da conversão
     description.textContent = `${symbol}1 = R$ ${formatCurrencyBRL(price)}`
+    
+    // calcula o total da conversão
+    let total = amount * price
+   
+    //exibe o total e
+    result.textContent = total
     
     // aplica a classe que exibe o footer com o resultado
     footer.classList.add("show-result")
