@@ -1,4 +1,7 @@
 💱 Convert - Conversor de Moedas
+<p align="center">
+  <img alt="Preview do Portfólio" src="img/convert-print.png" width="100%" style="border-radius: 8px; border: 2px solid #00eeff;">
+</p>
 Projeto de um conversor de moedas simples e elegante desenvolvido utilizando HTML, CSS e JavaScript. O objetivo da aplicação é converter valores de Dólar (USD), Euro (EUR) e Libra (GBP) para Real Brasileiro (BRL) com taxas pré-definidas.
 
 Este projeto foi desenvolvido como parte de um desafio/aula da Rocketseat.
